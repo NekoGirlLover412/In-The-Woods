@@ -1,0 +1,64 @@
+# This is a basic workflow to help you get started with Actions
+def scene1():
+   import time
+   print("""WELCOME TO IN THE WOODS 
+         Let's Start!
+
+         You wake up in a crossroad in the middle of the woods. Confused, you look around to find two ways you can go. You can go LEFT, or RIGHT. But you might want to hurry, ot IT will get you.
+
+         Type your choice: LEFT or RIGHT? 
+     """)
+
+     c1 = input()
+     time.sleep(2)
+     ans = 'incorrect'
+     while(ans=='incorrect'):
+         if(c1.upper()=="LEFT"):
+             print("\nYou decide to go left, but after walking for a while, you begin to regret your desicion. You turn back with remorse, but only to find that the road has closed off!You turn back around with confusion and fear, but to only find that this part is also closed off. You drop to your knees and sit there, waiting for something to happen as no one comes to your rescue.")
+             ans = 'correct'
+         elif(c1.upper()=="RIGHT"):
+             print("You go RIGHT and walk for quite a while. As night was beggining to fall, you find an abandoned pickup truck.")
+             ans='correct'
+             scene2()
+         else:
+             print("ENTER A VALID CHOICE! Left, or Right?")
+             c1 = input()
+             
+          
+def scene2():
+    import time
+    print("""
+             As you walk up the truck, you peer into the window to see if anyone is in there, but instead of finding someone, you find the keys in the ignition! You're not sure wether to break into the truck, because the alarm may trigger, or to walk away, in hopes of a safer way to get out of here!
+            
+            
+             Type your choice: KEYS or WALK?
+             
+             """)
+    time.sleep(2)
+    c1 = input()
+    ans = 'incorrect'
+    while(ans=='incorrect'):
+        if(c1.upper()=="KEYS"):
+            print("""\nYou break into the truck by breaking the driver seat window and quickly grabbing the keys to unlock the door. But once you shattered the glass, you triggered the alarm! You hear a horrifying screech in the distance. If your hearing is doing you good, you can tell that it was only a few miles away. 
+                       You hurry to unlock the door to drive away, and succeed, but barely. There was rustling in the trees just before you drove away, and you could swear you saw a humanoid creature waling acroos the road.""")
+            ans = 'correct'
+            pick="True"
+        elif(c1.upper()=='WALK'):
+            print("""\nYou decide to play it safe, and not take the risk of dying, so you walk along the road in hopes of a way out of here. Or a way home.""")
+            ans='correct'
+            pick="False"
+        else:
+            print("Wrong Input! Enter KEYS or WALK?")
+            c1=input()
+    time.sleep(2)
+    scene3(pick)
+def scene3(pick_value):
+    import time
+    print("""\n\nAfter going down the road for a while, you find a BUS STOP! But as you go to it, You notice IT is there. IT is a black mass of malice, It almost semms as if it is a shadow,
+          a floating shadow. It gives off a very bad feeling, a feeling that you are feeling currently feeling. The only thing you can think of doing is getting out of there right now.""")
+        time.sleep(2)
+        if(pick_value=="True"):
+            time.sleep(2)
+            print("""But at that moment, you realize you're still in your truck! You drive like a bat out of hell and succesfully get away from IT. As you do, you wake up in your bed, drenched with sweat, with the great felling of relief, but as you look outside, you're back at the crossroads! but something feels, OFF")
+       elif(pick_value=="False"):
+            print("You have nowhere to esape, so you accept your fate as IT comes closer to you, but as you do, you wake up in your bed, drenched with sweat, and a slash mark accros your arm, but you have he great felling of relief, but as you look outside, you're back at the crossroads! But something feels, OFF")
